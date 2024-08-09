@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src = ""></script>
+    <script src = "Wordgame.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="Wordgame.css"> 
 </head>
-<body>
+<body  onload = "createKeyboard()">
     <div class = "container">
         <div class="header">
             <h1>Word Game</h1>
@@ -15,10 +16,14 @@
                 <div class="score">Score : 10</div>
             </div>
         </div>
-        <div class = "keyboard">
+        <div id = "keyboard">
 
         </div>
-
+        <div class="controls">
+            <button class="control-btn">Start</button>
+            <button class="control-btn">Next Word</button>
+            <button class="control-btn">Hint...</button>
+        </div>
     </div>
 </body>
 </html>
