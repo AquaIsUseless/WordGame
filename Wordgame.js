@@ -76,22 +76,24 @@ function giveHint(){
     document.getElementById("hintArea").innerHTML = words[currentWord].hint;
 }
 
-function startGame(){
+function startGame(button){
     currentWord = 0;
     score = 0;
     document.getElementById("score").innerHTML = "Score:" + score;
     changeWord(0);
+    document.getElementById("nextWord").style.pointerEvents = 'auto';
     let countDownDate = new Date().getTime() + 30000;
+    document.getElementById("start").style.pointerEvents = 'none';
     var x = setInterval(function() {
-
+        console.log("i");
         var now = new Date().getTime();
-          
         var distance = countDownDate - now;
         document.getElementById("timer").innerHTML =  `Time: ${Math.floor(distance/1000)}`;
         if (distance <= 0){
             document.getElementById("timer").innerHTML = "Over!"
             clearInterval(x);
-            document.getElementById("nextWord").off('click');
+            document.getElementById("start").style.pointerEvents = 'auto';
+            document.getElementById("nextWord").style.pointerEvents = 'none';
             return;
         }
     }, 1000)
