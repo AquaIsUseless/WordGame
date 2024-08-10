@@ -12,16 +12,18 @@
         <div class="header">
             <h1>Word Game</h1>
             <div class="score-time">
-                <div class="timer">Time</div>
-                <div class="score">Score : 10</div>
+                <div id="timer">Time</div>
+                <div id="score" value = 0>Score : 0</div>
             </div>
         </div>
         <div id = "keyboard">
-
+            <div id = "writingBar">
+                
+            </div>
         </div>
         <div class="controls">
-            <button class="control-btn">Start</button>
-            <button class="control-btn">Next Word</button>
+            <button class="control-btn" onclick="startGame()">Start</button>
+            <button class="control-btn" onclick="compareWord()">Next Word</button>
             <button class="control-btn">Hint...</button>
         </div>
     </div>
