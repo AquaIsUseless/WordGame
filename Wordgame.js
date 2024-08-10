@@ -72,7 +72,14 @@ function changeWord(i){
     }
 }
 
+function giveHint(){
+    document.getElementById("hintArea").innerHTML = words[currentWord].hint;
+}
+
 function startGame(){
+    currentWord = 0;
+    score = 0;
+    document.getElementById("score").innerHTML = "Score:" + score;
     changeWord(0);
     let countDownDate = new Date().getTime() + 30000;
     var x = setInterval(function() {
@@ -83,6 +90,8 @@ function startGame(){
         document.getElementById("timer").innerHTML =  `Time: ${Math.floor(distance/1000)}`;
         if (distance <= 0){
             document.getElementById("timer").innerHTML = "Over!"
+            clearInterval(x);
+            document.getElementById("nextWord").off('click');
             return;
         }
     }, 1000)
