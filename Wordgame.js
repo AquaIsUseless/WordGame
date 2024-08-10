@@ -4,15 +4,15 @@ let words = [
         hint: "something that is used to blow things up"
     },
     {
-        word: "bomb1",
+        word: "bomba",
         hint: "something that is used to blow things up"
     },
     {
-        word: "bomb2",
+        word: "bombb",
         hint: "something that is used to blow things up"
     },
     {
-        word: "bomb34",
+        word: "bombca",
         hint: "something that is used to blow things up"
     }
 ]
